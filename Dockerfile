@@ -2,7 +2,6 @@ FROM alpine:latest
 RUN apk add --no-cache
 WORKDIR /app
 COPY . /app
-RUN apt-get update
 EXPOSE 9008
 ARG GIT_COMMIT=unspecified
 LABEL git_commit=$GIT_COMMIT
