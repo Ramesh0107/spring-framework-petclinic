@@ -1,10 +1,9 @@
 FROM alpine:latest
-RUN apk add --no-cache nodejs npm
+RUN apk add --no-cache
 WORKDIR /app
 COPY . /app
-RUN npm install
+RUN apt update
 EXPOSE 9008
-ENTRYPOINT ["node"]
 ARG GIT_COMMIT=unspecified
 LABEL git_commit=$GIT_COMMIT
 CMD ["server.js"]
