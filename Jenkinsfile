@@ -1,12 +1,12 @@
 pipeline{
     agent any
     environment {
-        PATH = "$PATH:/opt/apache-maven-3.8.2/bin"
+        PATH = "$PATH:/home/ubuntu/apache-maven-3.8.2/bin"
     }
     stages{
        stage('GetCode'){
             steps{
-                git 'https://github.com/ravdy/javaloginapp.git'
+                git 'https://github.com/Ramesh0107/spring-framework-petclinic.git'
             }
          }        
        stage('Build'){
