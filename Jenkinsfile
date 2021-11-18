@@ -1,5 +1,6 @@
 pipeline{
     agent any
+    {
     environment {
         PATH = "$PATH:/home/ubuntu/apache-maven-3.6.0/bin"
     }
@@ -21,5 +22,5 @@ pipeline{
         sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.6.2:sonar'
         sh "mvn sonar:sonar"
     }
-             }
-  
+    }
+    }
